@@ -1,20 +1,29 @@
-class Info():
-    
-    def __init__(self, name, age, phone):
-        self.name = name
-        self.age = age
-        self.phone = phone
+class Person():
+	def __init__(self,firstname,lastname,city):
+		self.firstname = firstname
+		self.lastname = lastname
+		self.city = city
+	def template(self):
+		with open ("data.txt","a") as file:
+			file.write(f"Hey, I am {self.firstname} {self.lastname} from {self.city}.\n")
 
-    def create_file(self):
-        with open ("data.txt","a") as file:
-            file.write(f"Hey, I am {self.name} of {self.age} and my contact is {self.phone}.\n")
+pwd = ""
 
+while pwd != "Paras@123":
+	pwd = input("Enter the password : ")
 
-name = input("Enter your name : ").strip()
-age = input("Enter your age : ").strip()
-phone = input("Enter your mobile number : ").strip()
+	if pwd == "Paras@123":
+		print("Successful!")
+		firstname = input("Enter your first name : ").strip()
+		lastname = input("Enter your last name : ").strip()
+		city = input("Enter your city : ").strip()
+		firstname = firstname.title()
+		lastname = lastname.title()
+		city = city.title()
 
-obj1 = Info(name, age, phone)
-obj1.create_file()
+		p1 = Person(firstname, lastname, city)
+		p1.template()
+		print("Thanks!! your info has been saved :-)")
 
-print("Thanks! your information has been saved.")
+	else:
+		print("Sorry! try again")
