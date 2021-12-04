@@ -10,16 +10,14 @@ class Person():
 pwd = ""
 
 while pwd != "Paras@123":
+	
 	pwd = input("Enter the password : ")
 
 	if pwd == "Paras@123":
 		print("Successful!")
-		firstname = input("Enter your first name : ").strip()
-		lastname = input("Enter your last name : ").strip()
-		city = input("Enter your city : ").strip()
-		firstname = firstname.title()
-		lastname = lastname.title()
-		city = city.title()
+		firstname = input("Enter your first name : ").strip().title()
+		lastname = input("Enter your last name : ").strip().title()
+		city = input("Enter your city : ").strip().title()
 
 		p1 = Person(firstname, lastname, city)
 		p1.template()
