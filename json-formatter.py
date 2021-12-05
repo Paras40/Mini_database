@@ -55,7 +55,7 @@ while pwd != "Paras@123":
 				add_main_characters()
 				w1.write()
 				close_json()
-				print("Thanks!! your information has been saved :-)")
+				print("Thanks!! your information has been saved\n----------------------------------------")
 			elif user.lower() == "e":
 				print("Have a good day\nThanks for using json-formatter")
 				break
