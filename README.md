@@ -1,3 +1,4 @@
-# Mini_database_system
-This tool will ask some details about you and store the data in a text file.
-It will gonna create a new text file automatically.
+# Json-formatter
+A tool that can save your data in a json format.
+You can also read your json file through it.
+Requirements - os, json
