@@ -34,11 +34,11 @@ def close_json():
 
 pwd = ""
 
-while pwd != "paras":
+while pwd != "Paras@123":
 
 	pwd = input("Enter the password : ")
 
-	if pwd == "paras":
+	if pwd == "Paras@123":
 		print("Successful!")
 		user = 'r'
 		while user == "r" or user == "w":
