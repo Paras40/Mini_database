@@ -18,8 +18,8 @@ class writing():
 	''')
 def read():
 	with open("mydata.json", "r") as read_file:
-		obj = json.load(read_file)
-		pretty_json = json.dumps(obj, indent=4)
+		data = json.load(read_file)
+		pretty_json = json.dumps(data, indent=4)
 		return(pretty_json)
 def drop_last_character():
 	with open('mydata.json', 'rb+') as filehandle:
@@ -34,14 +34,14 @@ def close_json():
 
 pwd = ""
 
-while pwd != "Paras@123":
+while pwd != "paras":
 
-	pwd = input("Enter the password : ")
+	pwd = input("Enter the password  : ")
 
-	if pwd == "Paras@123":
+	if pwd == "paras":
 		print("Successful!")
-		user = 'r'
-		while user == "r" or user == "w":
+		user = ""
+		while user == "r" or user == "w" or user == "":
 			user = input("What do you wanna do now?\nFor 'read' Press 'r'\nFor 'write' Press 'w'\nFor 'exit' Press 'e'\n")
 			if user == 'r':
 				print(f"==========Here is all the data==========\n{read()}")
@@ -57,14 +57,14 @@ while pwd != "Paras@123":
 				close_json()
 				print("Thanks!! your information has been saved\n----------------------------------------")
 			elif user.lower() == "e":
-				print("Have a good day\nThanks for using json-formatter")
+				print("Thanks for using json-formatter.\nHave a good day")
 				break
 			else:
-				print("We didn't understand your query.")
-				user = 'r'
-			again = input("Do you want to use json-formatter again?\nPress 'Enter' to continue or 'e' to exit\n")
+				print("We didn't understand your query.\nPlease restart the program")
+				break
+			again = input("Do you want to use json-formatter again?\nPress any key to continue or 'e' to exit\n")
 			if again.lower() == "e":
-				print("Have a good day\nThanks for using json-formatter")
+				print("Thanks for using json-formatter.\nHave a good day")
 				break
 	elif pwd.lower() == "e":
 		print("It seems you don't know the password.\nYou can check the password in the file named 'password.txt'")
