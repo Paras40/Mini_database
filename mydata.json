@@ -1,6 +1,8 @@
-[{
+[
+    {
     "id": "1",
     "firstname": "Paras",
     "lastname": "Tewari",
     "city": "Kotabagh"
-}]
+    }
+]
