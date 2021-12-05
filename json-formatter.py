@@ -57,14 +57,14 @@ while pwd != "paras":
 				close_json()
 				print("Thanks!! your information has been saved\n----------------------------------------")
 			elif user.lower() == "e":
-				print("Thanks for using json-formatter.\nHave a good day")
+				print("Thanks for using json-formatter\nHave a good day")
 				break
 			else:
-				print("We didn't understand your query.\nPlease restart the program")
+				print("We didn't understand your query\nPlease restart the program")
 				break
 			again = input("Do you want to use json-formatter again?\nPress any key to continue or 'e' to exit\n")
 			if again.lower() == "e":
-				print("Thanks for using json-formatter.\nHave a good day")
+				print("Thanks for using json-formatter\nHave a good day")
 				break
 	elif pwd.lower() == "e":
 		print("It seems you don't know the password.\nYou can check the password in the file named 'password.txt'")
